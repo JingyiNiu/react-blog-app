@@ -13,10 +13,12 @@ function App() {
   return (
     <div className="app-container">
       <Nav />
-      <Router>
-        <Homepage path="/" />
-        <Blog path="blog" />
-      </Router>
+      <div className="page-container">
+        <Router>
+          <Homepage path="/" />
+          <Blog path="blog" />
+        </Router>
+      </div>
       <Footer/>
     </div>
   );

@@ -1,0 +1,12 @@
+.app-container {
+    margin:auto;
+    position: relative;
+    min-height: 100vh;
+}
+
+.page-container{
+    width: 85%;
+    margin: auto;
+    padding: 20px;
+    padding-bottom: 80px;
+}
