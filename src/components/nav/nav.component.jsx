@@ -16,7 +16,7 @@ function Nav() {
           <Link to="blog">Blog</Link>
         </Menu.Item>
         <Menu.Item key="new-post" icon={<FormOutlined />}>
-          <Link to="">Create New Post</Link>
+          <Link to="newpost">Create New Post</Link>
         </Menu.Item>
         
         <Menu.Item key="signin" icon={<LoginOutlined />} style={{float:'right'}}>

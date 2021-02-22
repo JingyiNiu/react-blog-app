@@ -7,6 +7,7 @@ import Footer from './components/footer/footer.component';
 import Homepage from './pages/homepage/homepage.jsx';
 import Blog from './pages/blog/blog.jsx';
 import Post from './components/post/post.component.jsx'
+import NewPost from './components/new-post/new-post.component'
 
 import './App.css';
 
@@ -19,6 +20,7 @@ function App() {
           <Homepage path="/" />
           <Blog path="blog" />
           <Post path="post/:id" />
+          <NewPost path="newpost" />
         </Router>
       </div>
       <Footer/>
