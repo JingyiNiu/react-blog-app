@@ -11,8 +11,8 @@ const PostPreview = (props) => {
                 title={props.title}
                 extra={<a href="/">Edit</a>}
             >
-            {props.content}
-            ...   <Link to={`/post/${props.id}`}>Read Full Article</Link>
+                {props.content.substring(0,500)}
+                ...   <Link to={`/post/${props.id}`}>Read Full Article</Link>
             </Card>
         </div>
     );
