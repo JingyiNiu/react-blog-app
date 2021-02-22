@@ -1,6 +1,6 @@
 import React from 'react';
 import { PageHeader } from 'antd';
-import Post from '../../components/post/post.component';
+import PostPreview from '../../components/post-preview/post-preview.component';
 import api from '../../mockapi';
 import _ from 'lodash';
 
@@ -9,7 +9,7 @@ import './blog.style.css'
 const Blog = (props) => {
     return (
         <div className='blog-container'>
-            <div className='page-herder'>
+            <div className='page-header'>
                 <PageHeader 
                     title="Blog"
                     subTitle="All posts are shown here"
@@ -18,9 +18,11 @@ const Blog = (props) => {
             
             <div className='posts-container'>
                 {
-                    _.map(api, (article) => {
+                    _.map(api, (article, index) => {
                         return (
-                            <Post 
+                            <PostPreview
+                                key={index}
+                                id={article.id}
                                 title={article.title}
                                 content={article.content}
                             />
@@ -28,7 +30,6 @@ const Blog = (props) => {
                     })
                 }
             </div>
-
         </div>
     )
 }

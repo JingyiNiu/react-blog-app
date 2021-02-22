@@ -6,6 +6,7 @@ import Footer from './components/footer/footer.component';
 
 import Homepage from './pages/homepage/homepage.jsx';
 import Blog from './pages/blog/blog.jsx';
+import Post from './components/post/post.component.jsx'
 
 import './App.css';
 
@@ -17,6 +18,7 @@ function App() {
         <Router>
           <Homepage path="/" />
           <Blog path="blog" />
+          <Post path="post/:id" />
         </Router>
       </div>
       <Footer/>
