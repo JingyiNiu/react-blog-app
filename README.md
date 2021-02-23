@@ -13,6 +13,6 @@ ant design
 reach router
 > https://reach.tech/router/
 
-## Firebase
+## Database
 firestore to store data
 > https://firebase.google.com/docs/firestore/
