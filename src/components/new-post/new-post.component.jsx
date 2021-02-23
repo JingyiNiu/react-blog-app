@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { PageHeader, Input, Button } from 'antd';
+import db from '../../firebase';
 
 import './new-post.style.css';
 
 const NewPost = (props) => {
+
+    const [title, setTitle] = useState("");
+    const [content, setContent] = useState("");
+
+    const onTitleChange = (event) => setTitle(event.target.value);
+    const onContentChange = (event) => setContent(event.target.value);
+
+    const onCreatPost = () => {
+        console.log("Post Created")
+    }
+
 
     const { TextArea } = Input;
 
@@ -17,13 +29,13 @@ const NewPost = (props) => {
             </div>
             <div className='newpost-content-container'>
                 <div className="newpost-content-item">
-                    <Input placeholder="Title" />
+                    <Input placeholder="Title" value={title} onChange={onTitleChange} />
                 </div>
                 <div className="newpost-content-item">
-                    <TextArea rows={10} placeholder="Content"/>
+                    <TextArea rows={10} placeholder="Content" value={content} onChange={onContentChange} />
                 </div>
                 <div className="newpost-content-item">
-                    <Button type="primary" size="large" style={{float:"right"}}>Submit</Button>
+                    <Button type="primary" size="large" onClick={onCreatPost} style={{float:"right"}}>Create Post</Button>
                 </div>
             </div>
         </div>
