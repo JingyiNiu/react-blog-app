@@ -19,6 +19,9 @@ npm install antd
 ## Router
 reach router
 > https://reach.tech/router/
+```
+npm install @reach/router
+```
 
 ## Database
 firestore to store data
