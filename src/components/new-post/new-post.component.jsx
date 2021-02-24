@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { PageHeader, Input, Button } from 'antd';
 import db from '../../firebase';
+import { navigate } from "@reach/router"
 
 import './new-post.style.css';
 
@@ -23,8 +24,10 @@ const NewPost = (props) => {
             .catch((error) => {
                 console.error("Error adding document: ", error);
             });
-
-    }
+            setTitle('');
+            setContent('');
+            navigate('/blog');
+    }  
 
 
     const { TextArea } = Input;

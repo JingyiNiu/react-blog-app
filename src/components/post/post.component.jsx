@@ -18,8 +18,6 @@ const Post = (props) => {
             setTitle(title)
             setContent(content)
         })
-
-
     })
 
     return(
