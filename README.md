@@ -26,3 +26,11 @@ npm install @reach/router
 ## Database
 firestore to store data
 > https://firebase.google.com/docs/firestore/
+```
+npm install firebase@8.2.4 --save
+```
+add following to index.html
+```
+<script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-firestore.js"></script>
+```
