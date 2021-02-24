@@ -45,8 +45,8 @@ const firebaseConfig = {
     databaseURL: "### YOUR FIREBASE CONFIG FILE ###",
     projectId: "### YOUR FIREBASE CONFIG FILE ###",
     storageBucket: "### YOUR FIREBASE CONFIG FILE ###",
-    messagingSenderId: " YOUR FIREBASE CONFIG FILE ",
-    appId: " YOUR FIREBASE CONFIG FILE "
+    messagingSenderId: "### YOUR FIREBASE CONFIG FILE ###",
+    appId: "### YOUR FIREBASE CONFIG FILE ###"
   };
 firebase.initializeApp(firebaseConfig);
 
