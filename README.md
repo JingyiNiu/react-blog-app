@@ -10,6 +10,8 @@ npm init react-app <my-app>
 
 ## Styling
 ant design
+> https://www.npmjs.com/package/antd
+`npm install antd`
 > https://ant.design/components/overview/
 
 ## Router
