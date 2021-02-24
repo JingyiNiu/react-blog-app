@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { PageHeader, Card } from 'antd';
 
-import api from '../../mockapi';
+import db from '../../firebase';
 
 import './post.style.css';
 
@@ -11,9 +11,15 @@ const Post = (props) => {
     const [content, setContent] = useState('');
 
     useEffect(() => {
-        let post = api[props.id]
-        setTitle(post.title)
-        setContent(post.content)
+        let postRef = db.collection('posts').doc(props.id);
+
+        postRef.get().then(doc => {
+            let {title, content} = doc.data();
+            setTitle(title)
+            setContent(content)
+        })
+
+
     })
 
     return(
