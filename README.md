@@ -29,8 +29,30 @@ firestore to store data
 ```
 npm install firebase@8.2.4 --save
 ```
-add following to index.html
+add followings to index.html
 ```
 <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-firestore.js"></script>
+```
+set up your own firebase.js file and import it before use
+```
+import firebase from "firebase";
+require("firebase/firestore");
+
+const firebaseConfig = {
+    apiKey: "### YOUR FIREBASE CONFIG FILE ###",
+    authDomain: "### YOUR FIREBASE CONFIG FILE ###",
+    databaseURL: "### YOUR FIREBASE CONFIG FILE ###",
+    projectId: "### YOUR FIREBASE CONFIG FILE ###",
+    storageBucket: "### YOUR FIREBASE CONFIG FILE ###",
+    messagingSenderId: " YOUR FIREBASE CONFIG FILE ",
+    appId: " YOUR FIREBASE CONFIG FILE "
+  };
+firebase.initializeApp(firebaseConfig);
+
+var db = firebase.firestore();
+
+export const auth = firebase.auth();
+export const firestore = firebase.firestore;
+export default db;
 ```
