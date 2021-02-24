@@ -16,6 +16,12 @@ npm install antd
 ```
 > https://ant.design/components/overview/
 
+## Lodash
+> https://lodash.com/docs/4.17.15
+```
+$ npm i --save lodash
+```
+
 ## Router
 reach router
 > https://reach.tech/router/
