@@ -4,6 +4,9 @@ it's a react app and I'm tring to build a fully functional blog web application 
 ## Create React Project
 create-react-app
 > https://github.com/facebook/create-react-app
+```
+npm init react-app <my-app>
+```
 
 ## Styling
 ant design
