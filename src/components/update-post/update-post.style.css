@@ -1,0 +1,12 @@
+.update-post-container {
+    width: 80%;
+    margin: auto;
+}
+
+.update-post-header-container {
+    border: 1px solid #eee;
+}
+
+.update-post-content-container .update-post-content-item { 
+    margin-top: 20px;
+}

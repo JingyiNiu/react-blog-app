@@ -9,7 +9,7 @@ const PostPreview = (props) => {
             <Card 
                 type="inner" 
                 title={props.title}
-                extra={<a href="/">Edit</a>}
+                extra={<a href={`/update-post/${props.id}`}>Edit</a>}
             >
                 {props.content.substring(0,500)}
                 ...   <Link to={`/post/${props.id}`}>Read Full Article</Link>

@@ -18,14 +18,13 @@ const Post = (props) => {
             setTitle(title)
             setContent(content)
         })
-    })
+    },[])
 
     return(
         <div className="post-container">
             <div className='post-header-container'>
                 <PageHeader 
                     title={title}
-                    subTitle="Subtitle"
                 />
             </div>
             <div className='post-content-container'>

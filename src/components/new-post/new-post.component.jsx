@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { PageHeader, Input, Button } from 'antd';
 import db from '../../firebase';
-import { navigate } from "@reach/router"
+import { navigate } from "@reach/router";
 
 import './new-post.style.css';
 

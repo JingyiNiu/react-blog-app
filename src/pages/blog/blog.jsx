@@ -42,7 +42,7 @@ const Blog = (props) => {
                             <PostPreview
                                 key={index}
                                 id={article.id}
-                                title={article.title}
+                                title={_.startCase(article.title)}
                                 content={article.content}
                             />
                         )
