@@ -1,0 +1,19 @@
+.page-header {
+    border: 1px solid #eee;
+}
+
+.register-container {
+    width: 60%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.register-inputs-container {
+    width: 60%;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.register-item-container {
+    margin-top: 20px;
+}

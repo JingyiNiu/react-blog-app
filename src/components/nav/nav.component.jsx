@@ -20,10 +20,10 @@ function Nav() {
         </Menu.Item>
         
         <Menu.Item key="signin" icon={<LoginOutlined />} style={{float:'right'}}>
-          <Link to="">Sign In</Link>
+          <Link to="signin">Sign In</Link>
         </Menu.Item>
         <Menu.Item key="register" icon={<PlusOutlined />} style={{float:'right'}}>
-          <Link to="">Register</Link>
+          <Link to="register">Register</Link>
         </Menu.Item>
         <Menu.Item key="logout" icon={<ExportOutlined />} style={{float:'right'}}>
           <Link to="">Log Out</Link>

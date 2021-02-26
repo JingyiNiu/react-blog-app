@@ -1,0 +1,19 @@
+.page-header {
+    border: 1px solid #eee;
+}
+
+.signin-container {
+    width: 60%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.signin-inputs-container {
+    width: 60%;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.signin-item-container {
+    margin-top: 20px;
+}
