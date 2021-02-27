@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { PageHeader, Input, Button } from 'antd';
 import { MailOutlined, LockOutlined } from '@ant-design/icons';
-import { Link } from "@reach/router";
+import { Link, navigate } from '@reach/router';
+import { auth } from '../../firebase';
 
 import './sign-in.style.css';
 
@@ -10,8 +11,7 @@ const SignIn = () => {
         <div className='signin-container'>
             <div className='page-header'>
                 <PageHeader 
-                    title="Sign in"
-                    subTitle="Sign in with a existing account"
+                    title="Please Sign in"
                 />
             </div>
             
@@ -20,10 +20,10 @@ const SignIn = () => {
                     <Input size="large" placeholder="Email" prefix={<MailOutlined />} />
                 </div>
                 <div className='signin-item-container'>
-                    <Input size="large" placeholder="Password" prefix={<LockOutlined />} />
+                    <Input.Password size="large" placeholder="Password" prefix={<LockOutlined />} />
                 </div>
                 <div className='signin-item-container'>
-                <Link to="../register">Don't have an account</Link>
+                <Link to="../register">Don't have an account, Register</Link>
                     <Button type="primary" size="large" style={{float:"right"}}>Sign In</Button>
                 </div>
             </div>
