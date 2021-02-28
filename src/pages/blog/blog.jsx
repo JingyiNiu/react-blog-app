@@ -13,7 +13,7 @@ const Blog = (props) => {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        let postRef = db.collection('posts');
+        let postRef = db.collection('users').doc(props.user.uid).collection('posts');
 
         postRef
             .onSnapshot(async posts => {

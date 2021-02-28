@@ -22,8 +22,6 @@ function App() {
 
   auth.onAuthStateChanged((user) => {
     if (user) {
-      console.log("User signed in with UID: ");
-      console.log(user.uid);
       setUser(user);
     } else {
       console.log("No user signed in");
@@ -37,7 +35,7 @@ function App() {
         <Router>
           <Homepage path="/" />
           <Blog path="blog" user={user} />
-          <Post path="post/:id" />
+          <Post path="post/:id" user={user} />
           <NewPost path="newpost" user={user} />
           <UpdatePost path="update-post/:id" user={user} />
           <Register path="register" />

@@ -13,7 +13,12 @@ const PostPreview = (props) => {
     const onDeletePost = () => {
         let confirm = window.confirm('Are you sure you want to Remove?');
         if (confirm) {
-            let postRef = db.collection('posts').doc(props.id);
+            let postRef = db
+                .collection('users')
+                .doc(props.user.uid)
+                .collection('posts')
+                .doc(props.id);
+                
             postRef.delete()
                 .then(() => {
                     console.log("Document successfully deleted!");

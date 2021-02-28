@@ -19,7 +19,7 @@ const NewPost = (props) => {
 
     // If <create post> button is clicked, following function will be triggered
     const onCreatPost = () => {
-        let postRef = db.collection('posts');
+        let postRef = db.collection('users').doc(props.user.uid).collection('posts');
         let payload = {title, content};
 
         postRef.add(payload)

@@ -12,21 +12,31 @@ const UpdatePost = (props) => {
     const [title, setTitle] = useState("");
     const [content, setContent] = useState("");
 
-    useEffect((props) => {
-        let postRef = db.collection('posts').doc(props.id);
+    useEffect(() => {
+        let postRef = db
+            .collection('users')
+            .doc(props.user.uid)
+            .collection('posts')
+            .doc(props.id);
 
-        postRef.get().then(doc => {
-            let {title, content} = doc.data();
-            setTitle(title)
-            setContent(content)
-        })
-    },[props])
+        postRef
+            .get()
+            .then(doc => {
+                let {content, title} = doc.data();
+                setContent(content);
+                setTitle(title);
+            })
+    }, [])
 
     const onTitleChange = (event) => setTitle(event.target.value);
     const onContentChange = (event) => setContent(event.target.value);
 
     const onUpdatePost = () => {
-        let postRef = db.collection('posts').doc(props.id);
+        let postRef = db
+            .collection('users')
+            .doc(props.user.uid)
+            .collection('posts')
+            .doc(props.id);
         let payload = { title, content };
 
         postRef.update(payload)
