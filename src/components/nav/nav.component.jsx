@@ -6,7 +6,7 @@ import { auth } from '../../firebase';
 
 import './nav.style.css';
 
-{/* This is navigation component */}
+/* This is navigation component */
 
 const Nav = (props) =>  {
 
@@ -46,12 +46,12 @@ const Nav = (props) =>  {
               <Link to="signin">Sign In</Link>
             </Menu.Item>
             :
-            <a onClick={onSignOut} style={{float:'right', marginRight:'30px'}} >Sign Out</a>
+            <a href="/" onClick={onSignOut} style={{float:'right', marginRight:'30px'}} >Sign Out</a>
         }
 
         {/* If signed in, show welcome message */}
         { props.user &&
-          <a style={{float:'right', marginRight:'30px', color:'#bfbfbf'}}>
+          <a href="/" style={{float:'right', marginRight:'30px', color:'#bfbfbf'}}>
             Welcome, {props.user.email}
           </a>
         }

@@ -38,8 +38,8 @@ function App() {
           <Homepage path="/" />
           <Blog path="blog" user={user} />
           <Post path="post/:id" />
-          <NewPost path="newpost" />
-          <UpdatePost path="update-post/:id" />
+          <NewPost path="newpost" user={user} />
+          <UpdatePost path="update-post/:id" user={user} />
           <Register path="register" />
           <SignIn path="signin" />
         </Router>

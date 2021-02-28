@@ -5,9 +5,11 @@ import { navigate } from "@reach/router";
 
 import './new-post.style.css';
 
-{/* This is page to create a new post, only authorized user could see it */}
+/* This is page to create a new post, only authorized user could see it */
 
 const NewPost = (props) => {
+
+    console.log(props)
 
     const [title, setTitle] = useState("");
     const [content, setContent] = useState("");

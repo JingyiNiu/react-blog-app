@@ -1,12 +1,12 @@
 import React from 'react';
-import { Card } from 'antd';
+import { Card, Button} from 'antd';
 import { EditOutlined, DeleteOutlined } from '@ant-design/icons';
 import { Link } from "@reach/router";
 import db from '../../firebase';
 
 import './post-preview.style.css';
 
-{/* This is the component to show the snippet of one post and displays it in blog page */}
+/* This is the component to show the snippet of one post and displays it in blog page */
 
 const PostPreview = (props) => {
 
@@ -34,12 +34,8 @@ const PostPreview = (props) => {
                         {
                             props.user &&
                             <div>
-                                <a href={`/update-post/${props.id}`} style={{marginRight:'20px'}}>
-                                    <EditOutlined />
-                                </a>
-                                <a style={{color:'#ff4d4f'}} onClick={onDeletePost}>
-                                    <DeleteOutlined />
-                                </a>
+                                <Button type="text" icon={<EditOutlined />} href={`/update-post/${props.id}`} />
+                                <Button danger type="text" icon={<DeleteOutlined />} onClick={onDeletePost}/>
                             </div>
                         }
                     </div>  

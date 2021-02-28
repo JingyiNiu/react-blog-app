@@ -5,14 +5,14 @@ import db from '../../firebase';
 
 import './update-post.style.css';
 
-{/* This is the page to update one exact post, it loads title and content from firebase and then update it */}
+/* This is the page to update one exact post, it loads title and content from firebase and then update it */
 
 const UpdatePost = (props) => {
 
     const [title, setTitle] = useState("");
     const [content, setContent] = useState("");
 
-    useEffect(() => {
+    useEffect((props) => {
         let postRef = db.collection('posts').doc(props.id);
 
         postRef.get().then(doc => {
@@ -20,7 +20,7 @@ const UpdatePost = (props) => {
             setTitle(title)
             setContent(content)
         })
-    },[])
+    },[props])
 
     const onTitleChange = (event) => setTitle(event.target.value);
     const onContentChange = (event) => setContent(event.target.value);

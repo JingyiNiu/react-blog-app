@@ -5,14 +5,14 @@ import db from '../../firebase';
 
 import './post.style.css';
 
-{/* This is page to show the full content of one exact post */}
+/* This is page to show the full content of one exact post */
 
 const Post = (props) => {
 
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
 
-    useEffect(() => {
+    useEffect((props) => {
         let postRef = db.collection('posts').doc(props.id);
 
         postRef.get().then(doc => {
@@ -20,7 +20,7 @@ const Post = (props) => {
             setTitle(title)
             setContent(content)
         })
-    },[])
+    },[props])
 
     return(
         <div className="post-container">

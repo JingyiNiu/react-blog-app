@@ -6,7 +6,7 @@ import { auth } from '../../firebase';
 
 import './register.style.css';
 
-{/* This is register page, link from sign-in page */}
+/* This is register page, link from sign-in page */
 
 const Register = () => {
 

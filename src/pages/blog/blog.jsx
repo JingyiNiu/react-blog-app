@@ -6,7 +6,7 @@ import db from '../../firebase';
 
 import './blog.style.css'
 
-{/* This is Blog page, it shows all the posts from firebase and displays in post-previwe component*/}
+/* This is Blog page, it shows all the posts from firebase and displays in post-previwe component*/
 
 const Blog = (props) => {
 
@@ -41,7 +41,7 @@ const Blog = (props) => {
                     _.map(posts, (article, index) => {
                         return (
                             <PostPreview
-                                key={index}
+                                key={article.id}
                                 id={article.id}
                                 title={_.startCase(article.title)}
                                 content={article.content}

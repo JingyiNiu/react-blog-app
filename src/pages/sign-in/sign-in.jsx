@@ -6,7 +6,7 @@ import { auth } from '../../firebase';
 
 import './sign-in.style.css';
 
-{/* This is sign-in page, only unauthorised people see this link */}
+/* This is sign-in page, only unauthorised people see this link */
 
 const SignIn = () => {
 
