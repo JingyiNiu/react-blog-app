@@ -5,6 +5,8 @@ import db from '../../firebase';
 
 import './post.style.css';
 
+{/* This is page to show the full content of one exact post */}
+
 const Post = (props) => {
 
     const [title, setTitle] = useState('');

@@ -5,6 +5,8 @@ import db from '../../firebase';
 
 import './update-post.style.css';
 
+{/* This is the page to update one exact post, it loads title and content from firebase and then update it */}
+
 const UpdatePost = (props) => {
 
     const [title, setTitle] = useState("");

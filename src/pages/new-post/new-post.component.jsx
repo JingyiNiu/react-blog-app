@@ -5,6 +5,8 @@ import { navigate } from "@reach/router";
 
 import './new-post.style.css';
 
+{/* This is page to create a new post, only authorized user could see it */}
+
 const NewPost = (props) => {
 
     const [title, setTitle] = useState("");
@@ -13,6 +15,7 @@ const NewPost = (props) => {
     const onTitleChange = (event) => setTitle(event.target.value);
     const onContentChange = (event) => setContent(event.target.value);
 
+    // If <create post> button is clicked, following function will be triggered
     const onCreatPost = () => {
         let postRef = db.collection('posts');
         let payload = {title, content};
@@ -28,7 +31,6 @@ const NewPost = (props) => {
             setContent('');
             navigate('/blog');
     }  
-
 
     const { TextArea } = Input;
 

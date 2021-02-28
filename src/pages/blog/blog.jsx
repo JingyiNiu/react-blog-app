@@ -6,6 +6,8 @@ import db from '../../firebase';
 
 import './blog.style.css'
 
+{/* This is Blog page, it shows all the posts from firebase and displays in post-previwe component*/}
+
 const Blog = (props) => {
 
     const [posts, setPosts] = useState([]);

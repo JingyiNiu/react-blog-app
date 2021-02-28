@@ -6,9 +6,9 @@ import Footer from './components/footer/footer.component';
 
 import Homepage from './pages/homepage/homepage';
 import Blog from './pages/blog/blog';
-import Post from './components/post/post.component';
-import NewPost from './components/new-post/new-post.component';
-import UpdatePost from './components/update-post/update-post,component';
+import Post from './pages/read-one-post/post.component';
+import NewPost from './pages/new-post/new-post.component';
+import UpdatePost from './pages/update-post/update-post.component';
 import Register from './pages/register/register';
 import SignIn from './pages/sign-in/sign-in';
 
