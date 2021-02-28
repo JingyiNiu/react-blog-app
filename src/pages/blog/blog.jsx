@@ -44,6 +44,7 @@ const Blog = (props) => {
                                 id={article.id}
                                 title={_.startCase(article.title)}
                                 content={article.content}
+                                user={props.user}
                             />
                         )
                     })
