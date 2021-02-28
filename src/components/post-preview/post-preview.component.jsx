@@ -1,12 +1,28 @@
 import React from 'react';
 import { Card } from 'antd';
-import { DeleteOutlined } from '@ant-design/icons';
+import { EditOutlined, DeleteOutlined } from '@ant-design/icons';
 import { Link } from "@reach/router";
+import db from '../../firebase';
+
 import './post-preview.style.css';
 
 {/* This is the component to show the snippet of one post and displays it in blog page */}
 
 const PostPreview = (props) => {
+
+    const onDeletePost = () => {
+        let confirm = window.confirm('Are you sure you want to Remove?');
+        if (confirm) {
+            let postRef = db.collection('posts').doc(props.id);
+            postRef.delete()
+                .then(() => {
+                    console.log("Document successfully deleted!");
+                }).catch((error) => {
+                    console.error("Error removing document: ", error);
+                });
+        }
+    }
+
     return (
         <div className='post-container'>
             <Card 
@@ -14,16 +30,17 @@ const PostPreview = (props) => {
                 title={props.title}
                 extra={
                     <div>
-                        {/* Only signed in user could see <edit> link */}
+                        {/* Only signed in user could see <edit> and <delete> link */}
                         {
                             props.user &&
                             <div>
-                                <a href={`/update-post/${props.id}`} style={{marginRight:'10px'}}>
-                                    Edit
+                                <a href={`/update-post/${props.id}`} style={{marginRight:'20px'}}>
+                                    <EditOutlined />
                                 </a>
-                                <DeleteOutlined />
+                                <a style={{color:'#ff4d4f'}} onClick={onDeletePost}>
+                                    <DeleteOutlined />
+                                </a>
                             </div>
-
                         }
                     </div>  
                 }

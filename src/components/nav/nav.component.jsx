@@ -1,6 +1,6 @@
 import React from 'react';
 import { Menu } from 'antd';
-import { HomeOutlined, BookOutlined, FormOutlined, LoginOutlined, PlusOutlined } from '@ant-design/icons';
+import { HomeOutlined, BookOutlined, FormOutlined } from '@ant-design/icons';
 import { Link, navigate } from "@reach/router";
 import { auth } from '../../firebase';
 

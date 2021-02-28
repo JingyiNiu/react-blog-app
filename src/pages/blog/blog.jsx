@@ -15,17 +15,16 @@ const Blog = (props) => {
     useEffect(() => {
         let postRef = db.collection('posts');
 
-        postRef.get()
-            .then(posts => {
-                posts.forEach(post => {
+        postRef
+            .onSnapshot(async posts => {
+                let postsData = await posts.docs.map(post => {
                     let data = post.data();
                     let {id} = post;
-
                     let payload = {id, ...data}
-
-                    setPosts((posts) => [...posts, payload])
+                    return payload
                 })
-            })
+                setPosts(postsData);
+            });
     }, []);
 
     return (
