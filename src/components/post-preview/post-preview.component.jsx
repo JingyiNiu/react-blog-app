@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card } from 'antd';
+import { DeleteOutlined } from '@ant-design/icons';
 import { Link } from "@reach/router";
 import './post-preview.style.css';
 
@@ -16,9 +17,13 @@ const PostPreview = (props) => {
                         {/* Only signed in user could see <edit> link */}
                         {
                             props.user &&
-                            <a href={`/update-post/${props.id}`}>
-                                Edit
-                            </a>
+                            <div>
+                                <a href={`/update-post/${props.id}`} style={{marginRight:'10px'}}>
+                                    Edit
+                                </a>
+                                <DeleteOutlined />
+                            </div>
+
                         }
                     </div>  
                 }

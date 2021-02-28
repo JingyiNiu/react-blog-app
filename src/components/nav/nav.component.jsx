@@ -37,7 +37,7 @@ const Nav = (props) =>  {
             <Link to="newpost">Create New Post</Link>
           </Menu.Item>
         }
-        
+
         {/* If user has signed in, they could see <sign out> button. otherwise, ther will see <sign in> button */}
         {
           !props.user
@@ -46,7 +46,14 @@ const Nav = (props) =>  {
               <Link to="signin">Sign In</Link>
             </Menu.Item>
             :
-            <a onClick={onSignOut} style={{float:'right', marginRight:'30px'}} >Sign Out</a> 
+            <a onClick={onSignOut} style={{float:'right', marginRight:'30px'}} >Sign Out</a>
+        }
+
+        {/* If signed in, show welcome message */}
+        { props.user &&
+          <a style={{float:'right', marginRight:'30px', color:'whiteSmoke'}}>
+            Welcome, {props.user.email}
+          </a>
         }
       </Menu>
     </div>
