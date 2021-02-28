@@ -10,7 +10,6 @@ import './nav.style.css';
 
 const Nav = (props) =>  {
 
-  // Sign Out function
   // If <Sign Out> button is clicked, you will be signed out and page will be refreshed
   const onSignOut = () => {
     auth.signOut()
@@ -19,6 +18,7 @@ const Nav = (props) =>  {
       }).catch((error) => {
         console.log(error.message)
       });
+      navigate('../');
       window.location.reload();
   }
 
@@ -51,7 +51,7 @@ const Nav = (props) =>  {
 
         {/* If signed in, show welcome message */}
         { props.user &&
-          <a style={{float:'right', marginRight:'30px', color:'whiteSmoke'}}>
+          <a style={{float:'right', marginRight:'30px', color:'#bfbfbf'}}>
             Welcome, {props.user.email}
           </a>
         }
