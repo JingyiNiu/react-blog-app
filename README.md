@@ -29,11 +29,13 @@ reach router
 npm install @reach/router
 ```
 
-## Database
-firestore to store data
-> https://firebase.google.com/docs/firestore/
+
+## Backend
+Firebase
+> https://firebase.google.com/docs
+> https://www.npmjs.com/package/firebase
 ```
-npm install firebase@8.2.4 --save
+npm i firebase
 ```
 add followings to index.html
 ```
